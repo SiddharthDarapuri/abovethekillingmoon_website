@@ -1,4 +1,4 @@
-/*function addNumbers() {
+function addNumbers() {
   let a = 2;
   let b = 3;
   return a + b;
@@ -62,7 +62,7 @@ function getMultiple() {
 }
 
 clickCheck();
-getMultiple();*/
+getMultiple();
 
 /*fetch(`https://pokeapi.co/api/v2/pokemon/pikachu`)
   .then(response => response.json())
