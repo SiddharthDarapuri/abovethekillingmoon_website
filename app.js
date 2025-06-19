@@ -62,7 +62,7 @@ function getMultiple() {
 }
 
 clickCheck();
-getMultiple();
+getMultiple();*/
 
 /*fetch(`https://pokeapi.co/api/v2/pokemon/pikachu`)
   .then(response => response.json())
