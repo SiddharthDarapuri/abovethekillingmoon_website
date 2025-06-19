@@ -1,0 +1,47 @@
+h1{
+    color:rgb(158, 158, 158);
+    font-size: 20px;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+.CentreTitle{
+    color: rgb(156, 156, 156);
+    display: block;
+    position: absolute;
+    height:  auto;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+.container {
+    margin-left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item {
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    margin: 2px;
+  }
+
+  .pokemon {
+    transition: transform 0.4s ease;
+  }
+
+  .pokemon:hover {
+transform: scale(2,2);
+  }
