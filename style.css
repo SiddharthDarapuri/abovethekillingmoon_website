@@ -21,8 +21,10 @@ body {
 }
 
 .container {
-  margin-left: 50%;
+  width: 50%;
+  margin-left: 45%;
   display: flex;
+  position: fixed;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +33,7 @@ body {
 }
 
 .Slides {
-  margin-top: 2%;
+  margin-top: 5%;
   display: inline-block;
 }
 
