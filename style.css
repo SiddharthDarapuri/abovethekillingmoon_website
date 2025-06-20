@@ -1,47 +1,64 @@
-h1{
-    color:rgb(158, 158, 158);
-    font-size: 20px;
+h1 {
+  color: rgb(236, 109, 109);
+  font-size: 20px;
 }
 
-body{
-    background-color: #ffffff;
+body {
+  background-color: #353535;
 }
 
-.CentreTitle{
-    color: rgb(156, 156, 156);
-    display: block;
-    position: absolute;
-    height:  auto;
-    width: auto;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-align: center;
+.MainTitle {
+  color: rgb(73, 73, 73);
+  display: block;
+  position: absolute;
+  height: auto;
+  width: auto;
+  left: 5%;
+  font-family: "Michroma", sans-serif;
+  text-align: center;
+  animation: glow 1.5s infinite alternate;
+  text-shadow: 0 0 8px #f85252, 0 0 16px #ec6d6d, 0 0 24px #ec6d6d;
 }
 
 .container {
-    margin-left: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .item {
-    cursor: pointer;
-    flex-grow: 1;
-    flex-basis: 100px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px;
-    margin: 2px;
-  }
+  margin-left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .pokemon {
-    transition: transform 0.4s ease;
-  }
+.Slides {
+  top: 10%;
+  display: inline-block;
+}
 
-  .pokemon:hover {
-transform: scale(2,2);
-  }
+.slide {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item {
+  color: #ffffff;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 100px;
+  font-family: "Michroma", sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin: 2px;
+}
+
+.pokemon {
+  transition: transform 0.4s ease;
+}
+
+.pokemon:hover {
+  transform: scale(2, 2);
+}
+
+@keyframes glow{
+  from {  text-shadow: 0 0 8px #f85252, 0 0 16px #ec6d6d, 0 0 24px #ec6d6d;}
+  to {  text-shadow: 0 0 2px #ff0000, 0 0 4px #ec6d6d, 0 0 6px #ec6d6d;}
+}

@@ -7,14 +7,14 @@ function addNumbers() {
 
 let pokemonData = {};
 let pokemonNames = ['pikachu', 'groudon', 'mewtwo', 'kyogre', 'dialga', 'chikorita', 'haunter', 'mew', 'nidoking'];
-async function getPokemonData(pokemonName) {
+/*async function getPokemonData(pokemonName) {
   let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
   let data = await response.json();
   //console.log(data.sprites.front_default);
   let img = document.createElement('img');
   img.classList.add("pokemon");
   img.src = data.sprites.front_default;
-  document.getElementsByClassName('CentreTitle')[0].appendChild(img);
+  document.getElementsByClassName('MainTitle')[0].appendChild(img);
   img.addEventListener('click', event => {
     console.log(`Pokemon at Clicked!`, img);
     images = Array.from(document.getElementsByClassName('CentreTitle')[0].childNodes).filter(a => a.nodeName == 'IMG');
@@ -26,7 +26,7 @@ async function getPokemonData(pokemonName) {
     console.log(`Child at 0 is `, images);
     console.log(`Clicked at ${event.clientX} and ${event.clientY}`);
   });
-}
+}*/
 
 function clickCheck(){
   let x = document.getElementsByClassName("item");
