@@ -1,18 +1,22 @@
 h1 {
   color: rgb(255, 159, 159);
-  font-size: 20px;
+
 }
 
 body {
   background-color: #353535;
 }
 
+.TopSection {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
 .MainTitle {
-  color: rgb(73, 73, 73);
-  display: block;
-  position: absolute;
-  height: auto;
-  width: auto;
+  color: rgb(255, 159, 159);
+  font-size: 20px;
+  position: relative;
   left: 5%;
   font-family: "Michroma", sans-serif;
   text-align: center;
@@ -22,7 +26,6 @@ body {
 
 .container {
   width: 50%;
-  margin-top: 0.7%;
   margin-left: 45%;
   display: flex;
   position: fixed;
@@ -34,7 +37,7 @@ body {
 }
 
 .Slides {
-  margin-top: 5%;
+  margin-top: 0%;
   display: inline-block;
 }
 
@@ -48,13 +51,19 @@ body {
   color: #ffffff;
   cursor: pointer;
   flex-grow: 1;
-  flex-basis: 100px;
+  flex-basis: auto;
   font-family: "Michroma", sans-serif;
   font-size: 12px;
   text-align: center;
   padding: 10px;
   margin: 1px;
+  transition: font-size 0.5s;
 }
+
+.item:hover {
+  font-size: 16px;
+}
+
 
 .pokemon {
   transition: transform 0.4s ease;
