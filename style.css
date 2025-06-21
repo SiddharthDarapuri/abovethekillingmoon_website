@@ -4,7 +4,7 @@ h1 {
 }
 
 body {
-  background-color: #333241;
+  background-color: #ffffff;
   margin: 0;
 }
 
@@ -12,22 +12,23 @@ body {
   height: 5vh;
   display: flex;
   align-items: center;
-  border: 0.5px solid #535168;
+  border: 0.5px solid #d4d4d4;
   border-left: none;
   margin-left: -8px;
   margin-right: -8px;
   border-right: none;
+  box-shadow: 0px 2px 5px black;
 }
 
 .MainTitle {
-  color: rgb(255, 159, 159);
+  color: rgb(24, 24, 24);
   font-size: 1vmax;
   position: relative;
   left: 5%;
   font-family: "Michroma", sans-serif;
   text-align: center;
-  animation: glow 1.5s infinite alternate;
-  text-shadow: 0 0 8px #f85252, 0 0 16px #ec6d6d, 0 0 24px #ec6d6d;
+  /*animation: glow 1.5s infinite alternate;*/
+  /*text-shadow: 0 0 8px #000000, 0 0 16px #474747, 0 0 24px #070707;*/
 }
 
 .container {
@@ -38,7 +39,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #434255;
+  background-color: #ffffff;
   ;
   border-radius: 10px;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 .item {
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   flex-grow: 1;
   flex-basis: auto;
@@ -74,7 +75,7 @@ body {
 
 .item:hover {
   font-size: 16px;
-  border: 2px solid #f85d52;
+  border: 2px solid #000000;
   border-left: none;
   border-right: none;
   border-bottom: none;
@@ -91,10 +92,10 @@ body {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 8px #f85d52, 0 0 16px #ec6d6d, 0 0 24px #ec6d6d;
+    text-shadow: 0 0 8px #838282, 0 0 16px #3f3f3f, 0 0 24px #535353;
   }
 
   to {
-    text-shadow: 0 0 4px #ff4f4f, 0 0 6px #ec6d6d, 0 0 12px #ec6d6d;
+    text-shadow: 0 0 4px #474747, 0 0 6px #d8d8d8, 0 0 12px #0c0c0c;
   }
 }
