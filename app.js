@@ -1,7 +1,7 @@
-function addNumbers() {
+/*function addNumbers() {
   let a = 2;
   let b = 3;
-  console.log(a+b);
+  console.log(a + b);
   return a + b;
 }
 
@@ -28,12 +28,12 @@ let pokemonNames = ['pikachu', 'groudon', 'mewtwo', 'kyogre', 'dialga', 'chikori
   });
 }*/
 
-function clickCheck(){
-  let x = document.getElementsByClassName("item");
-  Array.from(x).forEach(item =>{
+/*function clickCheck() {
+  let x = document.getElementsByClassName('item');
+  Array.from(x).forEach(item => {
     item.addEventListener('click', event => {
-      prompt("Meow!");
-    })
+      prompt('Meow!');
+    });
   });
 }
 
@@ -73,3 +73,27 @@ addNumbers();
     console.log(pokemonData);
   })
   .catch(error => console.log(error));*/
+
+//////////////////////Truism//////////////////////////
+
+let currentTranslateY = 0;
+
+function update() {
+  requestAnimationFrame(update);
+}
+
+//scrollDivisionDynamic();
+
+function scrollDivisionDynamic() {
+  let elements = document.getElementsByClassName('slide');
+  for (let el of elements) {
+    el.addEventListener('wheel', function (event) {
+      console.log(event.deltaY);
+        for (let el of elements){
+      currentTranslateY += event.deltaY;
+      el.style.transform = `translateY(${currentTranslateY}px)`;
+  }});
+  }
+}
+
+function translateY(event) {}
