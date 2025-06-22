@@ -12,10 +12,9 @@ body {
   height: 5vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 0.5px solid #d4d4d4;
   border-left: none;
-  margin-left: -8px;
-  margin-right: -8px;
   border-right: none;
 }
 
@@ -58,10 +57,11 @@ body {
   color: #000000;
   cursor: pointer;
   flex-grow: 1;
+  height: 100%;
   font-family: "Michroma", sans-serif;
-  font-size: 80%;
+  font-size: 1.6vmin;
+  align-content: center;
   text-align: center;
-  padding: 1vh;
   border: 0px solid #5e5d77;
   border-left: none;
   border-right: none;
@@ -70,7 +70,7 @@ body {
 }
 
 .item:hover {
-  font-size: 100%;
+  font-size: 1.9vmin;
   border: 3px solid #5f54fa;
   border-left: none;
   border-right: none;
