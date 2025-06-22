@@ -19,10 +19,10 @@ body {
 }
 
 .MainTitle {
+  margin-left: 3%;
   color: rgb(24, 24, 24);
   font-size: 1vmax;
   position: relative;
-  left: 4%;
   font-family: "Michroma", sans-serif;
   text-align: center;
   /*animation: glow 1.5s infinite alternate;*/
@@ -32,10 +32,12 @@ body {
 .container {
   width: 50%;
   height: 100%;
+  margin-right: 3%;
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 10%;
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
@@ -56,7 +58,6 @@ body {
 .item {
   color: #000000;
   cursor: pointer;
-  flex-grow: 1;
   height: 100%;
   font-family: "Michroma", sans-serif;
   font-size: 1.6vmin;
