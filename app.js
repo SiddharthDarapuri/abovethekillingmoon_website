@@ -82,18 +82,41 @@ function update() {
   requestAnimationFrame(update);
 }
 
-//scrollDivisionDynamic();
+scrollDivisionDynamic('AboutText', 2);
+scrollDivisionDynamic('AboutHeading');
+scrollDivisionDynamic('SelfieImage');
+//flipDivisionDynamic('SelfieImage');
 
-function scrollDivisionDynamic() {
-  let elements = document.getElementsByClassName('slide');
-  for (let el of elements) {
+function scrollDivisionDynamic(elementName, speed = 5) {
+  let element = document.querySelector(`.${elementName}`);
+  console.log('Scrolling - ', element);
+  document.addEventListener('scroll', function (event) {
+    const scrollPercentage = getScrollPercentage();
+    element.style.transform = `translateY(${-scrollPercentage * speed}px)`;
+  });
+  /*for (let el of elements) {
     el.addEventListener('wheel', function (event) {
       console.log(event.deltaY);
         for (let el of elements){
       currentTranslateY += event.deltaY;
       el.style.transform = `translateY(${currentTranslateY}px)`;
   }});
-  }
+  }*/
 }
 
-function translateY(event) {}
+function flipDivisionDynamic(elementName){
+    let element = document.querySelector(`.${elementName}`);
+  console.log('Scrolling - ', element);
+  document.addEventListener('scroll', function (event) {
+    const scrollPercentage = getScrollPercentage();
+    element.style.transform = `rotateY(${-scrollPercentage/100 * 90}deg)`;
+  });
+}
+
+function getScrollPercentage() {
+  const scrolltop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercentage = (scrolltop / scrollHeight) * 100;
+  console.log('Scroll Percentage - ',scrollPercentage)
+  return scrollPercentage;
+}
