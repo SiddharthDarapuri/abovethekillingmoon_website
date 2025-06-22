@@ -31,10 +31,10 @@ body {
 }
 
 .container {
-  width: 50vw;
-  margin-left: 45%;
+  width: 50%;
+  height: 100%;
   display: flex;
-  position: fixed;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +59,7 @@ body {
   cursor: pointer;
   flex-grow: 1;
   font-family: "Michroma", sans-serif;
-  font-size: 1.5vmin;
+  font-size: 80%;
   text-align: center;
   padding: 1vh;
   border: 0px solid #5e5d77;
@@ -70,7 +70,7 @@ body {
 }
 
 .item:hover {
-  font-size: 1.9vmin;
+  font-size: 100%;
   border: 3px solid #5f54fa;
   border-left: none;
   border-right: none;
