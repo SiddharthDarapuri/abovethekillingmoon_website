@@ -8,6 +8,8 @@ h1 {
 }
 
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #5f5f5f;
   background-color: #ffffff;
   margin: 0;
 }
@@ -57,8 +59,8 @@ body {
 .BriefingSection {
   height: 50vh;
   display: flex;
-    align-content: space-around;
-    align-items: center;
+  align-content: space-around;
+  align-items: center;
   justify-content: space-between;
   gap: 10%;
   margin: 2%;
@@ -74,7 +76,6 @@ body {
 }
 
 .AboutHeading {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20vmin;
   text-align: left;
   color: #313131;
@@ -86,14 +87,45 @@ body {
 
 .AboutText {
   color: #5f5f5f;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1vw;
+  font-size: 1vw;
 }
 
 .SelfieImage {
   transform-origin: 50% 50%;
   height: 50vmin;
   border-radius: 50px;
+}
+
+.workIntroduction {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.description h3 {
+  font-family: "Michroma", sans-serif;
+  font-size: 2.5vmin;
+  font-weight: normal;
+}
+
+.description p {
+  font-size: 2vmin;
+}
+
+.artImage {
+  width: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /*animation: float 2s infinite alternate;*/
+}
+
+.artImage.visible {
+  opacity: 1;
+  transform: translateX(-20%);
 }
 
 .Slider {
@@ -170,6 +202,16 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(5%);
   }
 }
 

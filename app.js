@@ -82,17 +82,20 @@ function update() {
   requestAnimationFrame(update);
 }
 
-scrollDivisionDynamic('AboutText', 2);
-scrollDivisionDynamic('AboutHeading');
-scrollDivisionDynamic('SelfieImage');
+scrollDivisionDynamic('AboutText', 4);
+scrollDivisionDynamic('AboutHeading', 8);
+scrollDivisionDynamic('SelfieImage', 8.5);
+//scrollDivisionDynamic('artImage', 5, 'X', true, 50);
 //flipDivisionDynamic('SelfieImage');
 
-function scrollDivisionDynamic(elementName, speed = 5) {
+function scrollDivisionDynamic(elementName, speed = 5, axis = 'Y', reverse = false, endPercentage = 100) {
   let element = document.querySelector(`.${elementName}`);
   console.log('Scrolling - ', element);
   document.addEventListener('scroll', function (event) {
     const scrollPercentage = getScrollPercentage();
-    element.style.transform = `translateY(${-scrollPercentage * speed}px)`;
+    element.style.transform = `translate${axis}(${
+      (!reverse ? -scrollPercentage : scrollPercentage) * (100 / endPercentage) * speed
+    }px)`;
   });
   /*for (let el of elements) {
     el.addEventListener('wheel', function (event) {
@@ -104,12 +107,21 @@ function scrollDivisionDynamic(elementName, speed = 5) {
   }*/
 }
 
-function flipDivisionDynamic(elementName){
-    let element = document.querySelector(`.${elementName}`);
+function flipDivisionDynamic(elementName) {
+  let element = document.querySelector(`.${elementName}`);
   console.log('Scrolling - ', element);
   document.addEventListener('scroll', function (event) {
     const scrollPercentage = getScrollPercentage();
-    element.style.transform = `rotateY(${-scrollPercentage/100 * 90}deg)`;
+    element.style.transform = `rotateY(${(-scrollPercentage / 100) * 90}deg)`;
+  });
+}
+
+function addFloatAnimation(elementName) {
+  let element = document.querySelector(`.${elementName}`);
+  console.log('Scrolling - ', element);
+  document.addEventListener('hover', function (event) {
+    const scrollPercentage = getScrollPercentage();
+    element.style.transform = `rotateY(${(-scrollPercentage / 100) * 90}deg)`;
   });
 }
 
@@ -117,6 +129,26 @@ function getScrollPercentage() {
   const scrolltop = document.documentElement.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrollPercentage = (scrolltop / scrollHeight) * 100;
-  console.log('Scroll Percentage - ',scrollPercentage)
+  console.log('Scroll Percentage - ', scrollPercentage);
   return scrollPercentage;
 }
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+      if (!entry.isIntersecting) {
+        entry.target.classList.remove('visible');
+      }
+    });
+  },
+  {
+    threshold: 0.5 // Adjust this to trigger earlier/later
+  }
+);
+
+document.querySelectorAll('.artImage').forEach(el => {
+  observer.observe(el);
+});
